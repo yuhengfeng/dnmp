@@ -4,6 +4,7 @@ alias dphp='docker exec -it php /bin/sh'
 alias dphp56='docker exec -it php56 /bin/sh'
 alias dphp54='docker exec -it php54 /bin/sh'
 alias dmysql='docker exec -it mysql /bin/bash'
+alias dmysql5='docker exec -it mysql5 /bin/bash'
 alias dredis='docker exec -it redis /bin/sh'
 
 # php7 cli
@@ -54,7 +55,7 @@ composer () {
         --interactive \
         --rm \
         --user www-data:www-data \
-        --volume ~/dnmp/data/composer:/tmp/composer \
+        --volume ~/docker-work/dnmp/data/composer:/tmp/composer \
         --volume $(pwd):/app \
         --workdir /app \
         dnmp_php composer "$@"
